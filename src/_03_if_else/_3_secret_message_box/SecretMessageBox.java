@@ -26,9 +26,15 @@ public class SecretMessageBox {
 String message = JOptionPane.showInputDialog("Please give me a secret message!");
 	// 3. Now use a pop-up to tell the NEXT user that they can only see the secret message 
 	//    if they can guess the passcode
-
+String geuss = JOptionPane.showInputDialog("You can only see the message if geuss the code, enter the code in the space");
 	// 4. If their guess matches the password, show them the secret message
-
+		if (geuss.equals(password)) {
+			JOptionPane.showMessageDialog(null, message);
+		}
+		else {JOptionPane.showMessageDialog(null, "INTRUDER	");}
 	// 5. If the password does not match, pop-up "INTRUDER!!"
+		
+
+		}
 	}
-}
+
